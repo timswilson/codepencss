@@ -1,0 +1,24 @@
+/* Remove white background and padding from CodePen embed */
+body {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .cp_embed_wrapper {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .CodeMirror, .CodeMirror-scroll {
+    background: transparent !important;
+  }
+  
+  /* Remove any default styling that creates white space */
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    bac
