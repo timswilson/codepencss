@@ -1,26 +1,53 @@
-/* Remove white background and padding from CodePen embed */
-body {
+/* Target the CodePen embed body specifically */
+body.codepen-embed-body,
+html body.codepen-embed-body {
   background: transparent !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
-.cp_embed_wrapper {
+/* Target the main output container */
+#output {
   background: transparent !important;
+  border: none !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
-.CodeMirror,
-.CodeMirror-scroll {
+/* Target the result iframe container */
+#result-box {
+  background: transparent !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Target the iframe itself */
+.result-iframe {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Hide navigation and footer completely */
+.embed-nav,
+.embed-footer {
+  display: none !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Remove any default margins/padding from containers */
+.codepen-embed-body * {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
   background: transparent !important;
 }
 
-/* Remove any default styling that creates white space */
-* {
-  box-sizing: border-box;
-}
-
-html {
-  background: transparent !important;
+/* Exception: Keep your actual pen content styled normally */
+.result-iframe * {
+  margin: revert !important;
+  padding: revert !important;
+  border: revert !important;
+  background: revert !important;
 }
